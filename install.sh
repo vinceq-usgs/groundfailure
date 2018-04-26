@@ -20,7 +20,7 @@ done
 
 
 # Is conda installed?
-conda=$_CONDA_EXE
+conda=`which conda`
 
 # If not, install miniconda
 if [ ! "$conda" ] ; then
@@ -48,8 +48,7 @@ fi
 #fi
 
 # Need this to get conda into path
-. $HOME/miniconda/etc/profile.d/conda.sh
-
+. $(dirname $conda)/../etc/profile.d/conda.sh
 echo "PATH:"
 echo $PATH
 echo ""
