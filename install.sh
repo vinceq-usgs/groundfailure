@@ -30,7 +30,7 @@ if [ ! "$conda" ] ; then
     echo "Install directory: $HOME/miniconda"
     bash miniconda.sh -f -b -p $HOME/miniconda
     rm -f miniconda.sh
-    conda=`which conda`
+    conda=$HOME/miniconda/bin/conda
 fi
 
 # Source bash startup file
